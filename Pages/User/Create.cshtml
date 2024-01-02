@@ -1,0 +1,65 @@
+﻿@page
+@model Warehouse.Pages.User.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Users</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Users.Firstname" class="control-label"></label>
+                <input asp-for="Users.Firstname" class="form-control" />
+                <span asp-validation-for="Users.Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.secondname" class="control-label"></label>
+                <input asp-for="Users.secondname" class="form-control" />
+                <span asp-validation-for="Users.secondname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.Phonenumber" class="control-label"></label>
+                <input asp-for="Users.Phonenumber" class="form-control" />
+                <span asp-validation-for="Users.Phonenumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.Address" class="control-label"></label>
+                <input asp-for="Users.Address" class="form-control" />
+                <span asp-validation-for="Users.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.Postalcode" class="control-label"></label>
+                <input asp-for="Users.Postalcode" class="form-control" />
+                <span asp-validation-for="Users.Postalcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.Country" class="control-label"></label>
+                <input asp-for="Users.Country" class="form-control" />
+                <span asp-validation-for="Users.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.Email" class="control-label"></label>
+                <input asp-for="Users.Email" class="form-control" />
+                <span asp-validation-for="Users.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Users.Password" class="control-label"></label>
+                <input asp-for="Users.Password" class="form-control" />
+                <span asp-validation-for="Users.Password" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
